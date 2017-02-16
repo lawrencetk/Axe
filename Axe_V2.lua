@@ -154,8 +154,8 @@ local bm = NPC.GetItem(myHero, "item_blade_mail", true)
 
 
 
-   if blik ~= nill and Ability.IsCastable(ult, myMana) and Ability.IsReady(blik) then
-        if NPC.IsPositionInRange(myHero, pos, 1200, 0) then
+   if blik ~= nill and Ability.IsCastable(ult, myMana) and Ability.IsReady(blik) and NPC.IsPositionInRange(myHero, pos, 1200, 0) then
+        
 		    if bkb and Menu.IsEnabled(Axe.bkb) and Ability.IsReady(bkb) then Ability.CastNoTarget(bkb) end
 			if bm and Ability.IsReady(bm) then Ability.CastNoTarget(bm) end
 			if pipe and Menu.IsEnabled(Axe.pipeEnable) and Ability.IsCastable(pipe, myMana) then Ability.CastNoTarget(pipe) end
